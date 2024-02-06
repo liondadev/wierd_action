@@ -1,0 +1,11 @@
+name: Workflow Run
+on:
+  workflow_run:
+    workflows: ["Repo Events"]
+    types: [completed]
+
+jobs:
+  echo-string:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "I was run because repo events run"
