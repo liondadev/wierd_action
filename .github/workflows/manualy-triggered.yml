@@ -14,4 +14,4 @@ jobs:
     steps:
       - run: echo $GITHUB_REF
       - run: |
-        echo "${{ inputs.string }}"
+          echo "${{ inputs.string }}"
