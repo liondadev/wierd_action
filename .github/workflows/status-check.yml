@@ -8,9 +8,10 @@ jobs:
       - name: Sleep
         run: sleep 20
       - name: fail
+        id: failstep
         run: exit 1
       - name: runs on failure
-        if: failure()
+        if: failure() && steps.failstep.conclusion == 'failure'
         run: echo 'Runs on failure'
       - name: runs on success
         # this is the default behavior
