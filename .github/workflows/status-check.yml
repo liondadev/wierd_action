@@ -6,7 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Sleep
-        run: sleep 20
+        run: sleep 90
+        timeout-minutes: 1
       - name: fail
         id: failstep
         continue-on-error: true
