@@ -9,6 +9,7 @@ jobs:
         run: sleep 20
       - name: fail
         id: failstep
+        continue-on-error: true
         run: exit 1
       - name: runs on failure for step 2
         if: failure() && steps.failstep.conclusion == 'failure'
