@@ -1,5 +1,5 @@
-name: Concurrency 1
-run-name: C1 - ${{ inputs.environment }}
+name: Concurrency 2
+run-name: C2 - ${{ inputs.environment }}
 on:
   workflow_dispatch:
     inputs:
@@ -9,7 +9,7 @@ on:
         required: true
 
 concurrency:
-  group: ${{ github.event.inputs.environment }}
+  group: ${{ github.workflow }}-${{ github.event.inputs.environment }}
   cancel-in-progress: true
 
 jobs:
