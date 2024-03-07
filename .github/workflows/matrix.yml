@@ -22,7 +22,7 @@ jobs:
         exclude:
           - os: ubuntu-latest
             node-version: 14
-      fail-fast: true # if one fails, the other jobs in teh workflow wont be cancelled
+      fail-fast: false # if one fails, the other jobs in teh workflow wont be cancelled
       # max-parallel: 3
     runs-on: ${{ matrix.os }}
     steps:
