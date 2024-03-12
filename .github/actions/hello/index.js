@@ -2,6 +2,7 @@ const core = require("@actions/core");
 const github = require("@actions/github");
 
 try {
+  throw new Error("Bad Error");
   core.debug("Debug");
   core.warning("Warning");
   core.error("Error");
