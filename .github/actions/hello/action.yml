@@ -1,0 +1,23 @@
+name: Hello World
+author: Lion
+description: Greet someone, and record the time
+
+inputs:
+  who_to_greet:
+    description: Who To Greet
+    required: true
+    default: World
+
+outputs:
+  time:
+    description: the time of the greeting
+
+runs:
+  using: node16
+  main: index.js
+  pre: setup.js
+  pre-if: runner.os == 'linux'
+  post: cleanup.js
+  post-if: runner.os == 'linux'
+
+
