@@ -1,0 +1,12 @@
+name: Send Discord Message
+on: [workflow_dispatch]
+
+jobs:
+  send-message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Webhook
+        uses: liondadev/discord-action@v2
+        with:
+          webhook-url: ${{ secrets.WEBHOOK_URL }}
+          message: My Message
