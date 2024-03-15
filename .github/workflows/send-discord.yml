@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Send Webhook
-        uses: liondadev/discord-action@v2.1.1
+        uses: liondadev/discord-action@v2.1.3
         with:
           webhook-url: ${{ secrets.WEBHOOK_URL }}
           message: My Message
